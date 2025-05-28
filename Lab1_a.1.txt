@@ -1,0 +1,44 @@
+// Kyle Reed
+// COS-231-300
+// Prof. Wu
+// 1 October 2024
+
+// C Program allowing user to input triangle side lengths and validate whether the triangle is valid or not
+#include <stdio.h>
+
+int main()
+{
+// Declaration of side lengths for user input
+    int a, b, c;
+    
+// Allows user to input each side length of their triangle
+    printf("Please enter the three side lengths of your triangle: \n");
+    scanf("%d%d%d", &a, &b, &c);
+    
+// Validates whether user inputted triangle side lengths meets the rules of the Triangle Inequality Theorem
+    if((a + b) > c)
+    {
+        if((b + c) > a)
+        {
+            if((a + c) > b)
+            {
+            printf("This is a valid triangle");
+            }
+            else
+            {
+                printf("This is not a valid triangle");
+            }
+        }
+        else
+        {
+            printf("This is not a valid triangle");
+        }
+    }
+    else
+    {
+        printf("This is not a valid triangle");
+    }
+
+
+    return 0;
+}
